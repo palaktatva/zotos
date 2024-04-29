@@ -1,0 +1,58 @@
+@mixin translate($transformX, $transformY) {
+	-moz-transform: translate($transformX, $transformY);
+	-o-transform: translate($transformX, $transformY);
+	-ms-transform: translate($transformX, $transformY);
+	-webkit-transform: translate($transformX, $transformY);
+	transform: translate($transformX, $transformY);
+}
+
+@mixin rotate($rotate) {
+	-moz-transform: rotate($rotate);
+	-o-transform: rotate($rotate);
+	-ms-transform: rotate($rotate);
+	-webkit-transform: rotate($rotate);
+	transform: rotate($rotate);
+}
+
+@mixin translateY($translateY) {
+	-moz-transform: translateY($translateY);
+	-o-transform: translateY($translateY);
+	-ms-transform: translateY($translateY);
+	-webkit-transform: translateY($translateY);
+	transform: translateY($translateY);
+}
+
+@mixin translateX($translateX) {
+	-moz-transform: translateX($translateX);
+	-o-transform: translateX($translateX);
+	-ms-transform: translateX($translateX);
+	-webkit-transform: translateX($translateX);
+	transform: translateX($translateX);
+}
+
+@mixin translateZ($translateZ) {
+	-moz-transform: translateZ($translateZ);
+	-o-transform: translateZ($translateZ);
+	-ms-transform: translateZ($translateZ);
+	-webkit-transform: translateZ($translateZ);
+	transform: translateZ($translateZ);
+}
+
+@mixin transition($transition) {
+	transition: $transition;
+	-o-transition: $transition;
+	-ms-transition: $transition;
+	-webkit-transition: $transition;
+	-moz-transition: $transition;
+}
+
+@mixin box-shadow($box-shadow) {
+	box-shadow: $box-shadow;
+	-o-box-shadow: $box-shadow;
+	-ms-box-shadow: $box-shadow;
+	-webkit-box-shadow: $box-shadow;
+	-moz-box-shadow: $box-shadow;
+}
+
+
+

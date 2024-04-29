@@ -1,0 +1,72 @@
+//Break points
+@mixin bp($point) {
+    $xxxs-max: "(max-width: 374px)";
+    $xxs-max: "(max-width: 479px)";
+    $xs-max: "(max-width: 575px)";
+    $sm-max: "(max-width: 767px)";
+    $sm-min: "(min-width: 768px)";
+    $smd-max: "(max-width: 991px)";
+    $smd-min: "(min-width: 992px)";
+    $md-max: "(max-width: 1023px)";
+    $lg-max: "(max-width: 1199px)";
+    $lgl-max: "(max-width: 1280px)";
+    $xxlg-max: "(max-width: 1440px)";
+
+    @if $point==xxxs-max {
+        @media #{$xxxs-max} {
+            @content;
+        }
+    }
+    @else if $point==xxs-max {
+        @media #{$xxs-max} {
+            @content;
+        }
+    }
+    @else if $point==xs-max {
+        @media #{$xs-max} {
+            @content;
+        }
+    }
+    @else if $point==sm-min {
+        @media #{$sm-min} {
+            @content;
+        }
+    }
+    @else if $point==sm-max {
+        @media #{$sm-max} {
+            @content;
+        }
+    }
+    @else if $point==smd-min {
+        @media #{$smd-min} {
+            @content;
+        }
+    }
+    @else if $point==smd-max {
+        @media #{$smd-max} {
+            @content;
+        }
+    }
+    @else if $point==md-max {
+        @media #{$md-max} {
+            @content;
+        }
+    }
+    @else if $point==lg-max {
+        @media #{$lg-max} {
+            @content;
+        }
+    }
+    @else if $point==lgl-max {
+        @media #{$lgl-max} {
+            @content;
+        }
+    }
+   @else if $point==xxlg-max {
+        @media #{$xxlg-max} {
+            @content;
+        }
+    }
+  
+
+}

@@ -1,0 +1,188 @@
+@font-face {
+  font-family: "helveticaneue-bold";
+  src: url("../fonts/HelveticaNeueLTStd-BdCn.woff");
+}
+@font-face {
+  font-family: "summerloving-regular";
+  src: url("../fonts/SummerLovingSolid-Regular.woff");
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "helveticaneue-bold";
+  font-size: 20px;
+  font-weight: 400;
+  color: #000000;
+}
+
+ul {
+  list-style-type: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  color: #000000;
+  text-decoration: none;
+}
+
+h2 {
+  font-size: 32px;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 15px;
+}
+
+h3 {
+  font-size: 39px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.btn {
+  min-height: 60px;
+  min-width: 220px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  border: 2px solid #000000;
+}
+
+.container {
+  max-width: 900px;
+  padding: 0 50px;
+  margin: 0 auto;
+}
+
+.quiz-section {
+  padding: 80px 0;
+}
+.quiz-section .heading-block span {
+  font-size: 102px;
+  font-family: "summerloving-regular";
+  display: block;
+  word-spacing: 20px;
+}
+.quiz-section .steps-content-block {
+  background-color: #ffeaf3;
+  padding: 50px 0;
+  margin-bottom: 45px;
+}
+.quiz-section .steps-content-block.bg-blue {
+  background-color: #c6f6ec !important;
+}
+.quiz-section .steps-content-block.bg-green {
+  background-color: #e3ffc4 !important;
+}
+.quiz-section .steps-content-block .title-block {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.quiz-section .steps-content-block .title-block .tooltip-block {
+  display: flex;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 0px 15px 20px;
+  background-color: #ffffff;
+  align-items: flex-end;
+  border-radius: 11px;
+}
+.quiz-section .steps-content-block .title-block .tooltip-block span {
+  font-size: 78px;
+  font-family: "summerloving-regular";
+  line-height: 1;
+  margin-right: 20px;
+}
+.quiz-section .steps-content-block .radio-checkbox-listing {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -10px -20px;
+}
+.quiz-section .steps-content-block .radio-checkbox-listing .radio-checkbox-list {
+  flex: 0 0 33.33%;
+  max-width: 33.33%;
+  padding: 0 10px 20px;
+}
+.quiz-section .steps-content-block .radio-checkbox-listing .radio-checkbox-list .radio-checkbox-list-inner {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.quiz-section .steps-content-block .radio-checkbox-listing .radio-checkbox-list .radio-checkbox-list-inner input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 1;
+}
+.quiz-section .steps-content-block .radio-checkbox-listing .radio-checkbox-list .radio-checkbox-list-inner label {
+  order: 1;
+  text-align: center;
+}
+.quiz-section .steps-content-block .radio-checkbox-listing .radio-checkbox-list .radio-checkbox-list-inner .image-block {
+  position: relative;
+  padding-bottom: 100%;
+  margin-bottom: 10px;
+}
+.quiz-section .steps-content-block .radio-checkbox-listing .radio-checkbox-list .radio-checkbox-list-inner .image-block img {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.quiz-section .actions.clearfix {
+  margin-bottom: 35px;
+}
+.quiz-section .actions.clearfix ul {
+  display: flex;
+  margin: 0 -10px;
+  justify-content: center;
+}
+.quiz-section .actions.clearfix ul li {
+  padding: 0 10px;
+}
+.quiz-section .actions.clearfix ul li a {
+  min-height: 60px;
+  min-width: 220px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  border: 2px solid #000000;
+}
+.quiz-section .button-wrapper {
+  text-align: center;
+  margin-bottom: 35px;
+  display: none;
+}
+.quiz-section .button-wrapper ul {
+  display: flex;
+  margin: 0 -10px;
+  justify-content: center;
+}
+.quiz-section .button-wrapper ul li {
+  padding: 0 10px;
+}
+.quiz-section .progress-bar {
+  display: flex;
+  justify-content: center;
+}
+.quiz-section .progress-bar .image-block {
+  max-width: 560px;
+  border-radius: 8px;
+  overflow: hidden;
+  height: 15px;
+  border: 1px solid #000000;
+  background-color: #ffffff;
+}
+.quiz-section .progress-bar .image-block img {
+  display: block;
+}/*# sourceMappingURL=main.css.map */

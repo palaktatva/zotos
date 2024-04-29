@@ -1,0 +1,21 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'helveticaneue-bold';
+    font-size: 20px;
+    font-weight: 400;
+    color: $black;
+}
+ul{
+    list-style-type: none;
+}
+img{
+    max-width: 100%;
+}
+a{
+    color: $black;
+    text-decoration: none;
+}
