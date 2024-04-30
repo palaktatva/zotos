@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/jquery.steps.css">
     <link rel="stylesheet" href="css/main.css">
     <title>ZOTOS</title>
 </head>
@@ -16,9 +17,12 @@
                     <h2>GET YOUR custom <span>Curl Routine</span></h2>
                 </div>
             </div>
+            <form id="example-form" action="#" class="tab-wizard wizard-circle wizard clearfix">
             <div class="step-content-wrapper">
-
-                <div class="steps-content-block">
+                
+            
+                <span class="step-block"></span>    
+                <div class="steps-content-block current">
                     <div class="container">
                         <div class="title-block">
                             <h3>WHAT’S YOUR CURL PATTERN?</h3>
@@ -30,7 +34,7 @@
                         <ul class="radio-checkbox-listing">
                             <li class="radio-checkbox-list">
                                 <div class="radio-checkbox-list-inner">
-                                    <input type="radio" name="curl-type" id="2a-way">
+                                    <input type="radio" name="curl-type" id="2a-way" checked>
                                     <label for="2a-way">2A Wavy</label>
                                     <div class="image-block">
                                         <img src="images/curl-pattern-1.jpg" alt="curl-pattern-1">
@@ -113,6 +117,7 @@
                         </ul>
                     </div>
                 </div>
+                <span class="step-block"></span> 
                 <div class="steps-content-block bg-blue">
                     <div class="container">
                         <div class="title-block">
@@ -153,9 +158,8 @@
 
                         </ul>
                     </div>
-
-
                 </div>
+                <span class="step-block"></span> 
                 <div class="steps-content-block bg-green">
                     <div class="container">
                         <div class="title-block">
@@ -196,20 +200,180 @@
 
                         </ul>
                     </div>
-
-
                 </div>
+
+                <span class="step-block"></span> 
+                <div class="steps-content-block bg-light-blue">
+                    <div class="container">
+                        <div class="title-block">
+                            <h3>HOW OFTEN DO YOU COLOR YOUR HAIR?</h3>
+                        </div>
+                        <ul class="radio-checkbox-listing checkbox-listing">
+                            <li class="radio-checkbox-list">
+                                <div class="radio-checkbox-list-inner">
+                                    <input type="checkbox" name="curl-type" id="naver">
+                                    <label for="naver">NEVER</label>
+                                </div>
+                            </li>
+                            <li class="radio-checkbox-list">
+                                <div class="radio-checkbox-list-inner">
+                                    <input type="checkbox" name="curl-type" id="every-month">
+                                    <label for="every-month">Every MONTH</label>
+                                </div>
+                            </li>
+                            <li class="radio-checkbox-list">
+                                <div class="radio-checkbox-list-inner">
+                                    <input type="checkbox" name="curl-type" id="every-2-month">
+                                    <label for="every-2-month">Every 2 MONTHS</label>
+                                </div>
+                            </li>
+                            <li class="radio-checkbox-list">
+                                <div class="radio-checkbox-list-inner">
+                                    <input type="checkbox" name="curl-type" id="every-3-month">
+                                    <label for="every-3-month">Every 3 MONTHS</label>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <span class="step-block"></span> 
+                <div class="steps-content-block">
+                    <div class="container">
+                        <div class="title-block">
+                            <h3>HOW OFTEN DO YOU BLEACH YOUR HAIR?</h3>
+                        </div>
+                        <ul class="radio-checkbox-listing checkbox-listing">
+                            <li class="radio-checkbox-list">
+                                <div class="radio-checkbox-list-inner">
+                                    <input type="checkbox" name="curl-type" id="naver">
+                                    <label for="naver">NEVER</label>
+                                </div>
+                            </li>
+                            <li class="radio-checkbox-list">
+                                <div class="radio-checkbox-list-inner">
+                                    <input type="checkbox" name="curl-type" id="every-month">
+                                    <label for="every-month">Every MONTH</label>
+                                </div>
+                            </li>
+                            <li class="radio-checkbox-list">
+                                <div class="radio-checkbox-list-inner">
+                                    <input type="checkbox" name="curl-type" id="every-2-month">
+                                    <label for="every-2-month">Every 2 MONTHS</label>
+                                </div>
+                            </li>
+                            
+                            <li class="radio-checkbox-list">
+                                <div class="radio-checkbox-list-inner">
+                                    <input type="checkbox" name="curl-type" id="every-3-month">
+                                    <label for="every-3-month">Every 3 MONTHS</label>
+                                </div>
+                            </li>
+                            <li class="radio-checkbox-list">
+                                <div class="radio-checkbox-list-inner">
+                                    <input type="checkbox" name="curl-type" id="every-6-month">
+                                    <label for="every-6-month">Every 6 MONTHS</label>
+                                </div>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+
+                <span class="step-block"></span> 
+                <div class="steps-content-block bg-blue">
+                    <div class="container">
+                        <div class="title-block">
+                            <h3>HOW OFTEN DO YOU Perm/Relax YOUR HAIR?</h3>
+                        </div>
+                        <ul class="radio-checkbox-listing checkbox-listing">
+                            <li class="radio-checkbox-list">
+                                <div class="radio-checkbox-list-inner">
+                                    <input type="checkbox" name="curl-type" id="naver">
+                                    <label for="naver">NEVER</label>
+                                </div>
+                            </li>
+                            <li class="radio-checkbox-list">
+                                <div class="radio-checkbox-list-inner">
+                                    <input type="checkbox" name="curl-type" id="every-month">
+                                    <label for="every-month">Every MONTH</label>
+                                </div>
+                            </li>
+                            <li class="radio-checkbox-list">
+                                <div class="radio-checkbox-list-inner">
+                                    <input type="checkbox" name="curl-type" id="every-2-month">
+                                    <label for="every-2-month">Every 2 MONTHS</label>
+                                </div>
+                            </li>
+                            
+                            <li class="radio-checkbox-list">
+                                <div class="radio-checkbox-list-inner">
+                                    <input type="checkbox" name="curl-type" id="every-3-month">
+                                    <label for="every-3-month">Every 3 MONTHS</label>
+                                </div>
+                            </li>
+                            <li class="radio-checkbox-list">
+                                <div class="radio-checkbox-list-inner">
+                                    <input type="checkbox" name="curl-type" id="every-6-month">
+                                    <label for="every-6-month">Every 6 MONTHS</label>
+                                </div>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+
+                <span class="step-block"></span> 
+                <div class="steps-content-block bg-green">
+                    <div class="container">
+                        <div class="title-block">
+                            <h3>WHAT’S YOUR HAIR POROSITY?</h3>
+                            <div class="tooltip-block">
+                                <span>tip</span>
+                                <p>Test your hair porosity by dropping a single strand of your hair into a glass with water. If it sinks to the bottom of the glass or floats at the top.</p>
+                            </div>
+                        </div>
+                        <ul class="radio-checkbox-listing">
+                            <li class="radio-checkbox-list">
+                                <div class="radio-checkbox-list-inner">
+                                    <input type="radio" name="curl-type" id="naver">
+                                    <div class="image-block image-content">
+                                        <label for="low porosity">LOW POROSITY</label>  
+                                         <p>My hair needs lightweight moisturizing products with protein because heavy moisturizing products weigh my hair down.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="radio-checkbox-list">
+                                <div class="radio-checkbox-list-inner">
+                                    <input type="radio" name="curl-type" id="every-month">
+                                    <div class="image-block image-content">
+                                        <label for="medium porosity">MEDIUM POROSITY</label>  
+                                         <p>My hair needs lightweight moisturizing products with protein because heavy moisturizing products weigh my hair down.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="radio-checkbox-list">
+                                <div class="radio-checkbox-list-inner">
+                                    <input type="radio" name="curl-type" id="every-2-month">
+                                    <div class="image-block image-content">
+                                        <label for="high porosity">HIGH POROSITY</label>  
+                                         <p>My hair needs heavy moisturizing products to be thoroughly moisturized.</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                
+
+           
             </div>
+        </form>
 
-                <div class="button-wrapper">
-                    <ul>
-                        <li><a href="" class="btn">Back</a></li>
-                        <li><a href="" class="btn">Next</a></li>                                              
-                    </ul>
-                </div>
                 <div class="progress-bar">
-                    <div class="image-block">
-                        <img src="images/progress-bar.png" alt="progress-bar">
+                    <div class="progress-bar-inner">
+                       <span></span>
                     </div>
                 </div>
             
@@ -219,7 +383,7 @@
     
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/jquery-migrate-1.4.1.min.js"></script>
-    <script src="js/jquery.steps.min.js"></script>
+    <script src="js/jquery.steps.js"></script>
     <script src="js/main.js"></script>
 
 </body>

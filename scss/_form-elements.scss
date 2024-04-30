@@ -8,3 +8,53 @@
     border: 2px solid $black;
 }
 
+.actions{
+    &.clearfix{
+       margin-bottom: 35px;
+
+        ul{
+            display: flex;
+            margin: 0 -10px;
+            justify-content: center; 
+
+            li{
+                padding: 0 10px;
+                &:nth-child(2){
+                    a{
+                        background-color: $btn-color;
+                    }
+                }
+                &:nth-child(3){
+                    a{
+                        background-color: $btn-color;
+                    }
+                }
+
+                a{
+                    min-height: 60px;
+                    min-width: 220px;
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 22px;
+                    border: 2px solid $black;
+                }
+            }
+        }
+    }
+}
+
+.tabcontrol{
+    ul{
+        display: none;
+    }
+    .content{
+        border: none;
+        min-height: 1220px;
+
+        .body{
+            width: 100%;
+            
+        }
+    }
+}

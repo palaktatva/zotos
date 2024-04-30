@@ -12,8 +12,12 @@ body{
 ul{
     list-style-type: none;
 }
+li{
+    list-style-type: none;
+}
 img{
     max-width: 100%;
+    display: block;
 }
 a{
     color: $black;
