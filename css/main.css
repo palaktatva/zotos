@@ -42,13 +42,13 @@ h2 {
   text-transform: uppercase;
   font-weight: 700;
   line-height: 1;
-  margin-bottom: 15px;
+  margin-bottom: 18px;
 }
 
 h3 {
   font-size: 39px;
   font-weight: 700;
-  margin-bottom: 10px;
+  margin-bottom: 24px;
 }
 
 .btn {
@@ -68,9 +68,16 @@ h3 {
 .close-btn {
   min-height: 40px;
   min-width: 150px;
+  transition: all 0.5s;
 }
 .close-btn:hover {
   background-color: #fedc3e;
+}
+
+.disable {
+  opacity: 0.7;
+  pointer-events: none;
+  cursor: default;
 }
 
 .actions.clearfix {
@@ -90,6 +97,9 @@ h3 {
 }
 .tabcontrol .content {
   border: none;
+  padding-top: 0;
+  height: auto;
+  transition: min-height 0.6s;
 }
 .tabcontrol .content .body {
   width: 100%;
@@ -98,7 +108,7 @@ h3 {
 }
 
 .container {
-  max-width: 900px;
+  max-width: 908px;
   padding: 0 50px;
   margin: 0 auto;
 }
@@ -107,14 +117,14 @@ h3 {
   padding: 80px 0;
 }
 .quiz-section .heading-block span {
-  font-size: 102px;
+  font-size: 70px;
   font-family: "summerloving-regular";
   display: block;
   word-spacing: 20px;
   font-weight: 400;
 }
 .quiz-section .steps-content-block .step-inner-block {
-  padding: 50px 0;
+  padding: 35px 0 54px;
   background-color: #ffeaf3;
 }
 .quiz-section .steps-content-block .step-inner-block.bg-blue {
@@ -150,6 +160,9 @@ h3 {
 .quiz-section .steps-content-block .step-inner-block.bg-light-blue input:checked ~ .image-block {
   border: 3px solid #1d6153 !important;
 }
+.quiz-section .steps-content-block .step-inner-block .container {
+  max-width: 908px;
+}
 .quiz-section .steps-content-block .title-block {
   text-align: center;
   margin-bottom: 45px;
@@ -159,7 +172,7 @@ h3 {
 }
 .quiz-section .steps-content-block .title-block .tooltip-block {
   display: flex;
-  max-width: 400px;
+  max-width: 468px;
   margin: 0 auto;
   padding: 0px 15px 20px;
   background-color: #ffffff;
@@ -179,9 +192,9 @@ h3 {
   height: 25px;
   background: white;
   position: absolute;
-  top: -13px;
+  top: -14px;
   transform: rotate(45deg);
-  left: 40px;
+  left: 50px;
 }
 .quiz-section .radio-checkbox-listing {
   display: flex;
@@ -269,7 +282,7 @@ h3 {
   background: url(../images/progress-bar.png);
   background-repeat: no-repeat;
   position: absolute;
-  width: 0%;
+  width: 10%;
   left: 0;
   top: 0;
   height: 100%;
@@ -292,6 +305,8 @@ h3 {
 }
 .custom-modal.visible {
   display: block;
+}
+.custom-modal.visible.fadein {
   opacity: 1;
 }
 .custom-modal.visible .modal-backdrop {
