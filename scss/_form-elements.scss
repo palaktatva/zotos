@@ -10,6 +10,7 @@
 
 .yellow-btn{
     background-color: $btn-color;
+    border: 2px solid transparent;
 }
 .close-btn{
     min-height: 40px;
@@ -23,21 +24,21 @@
 .disable{
     opacity: 0.7;
     pointer-events: none;
-    cursor: default;
-    
+    cursor: default;    
 
 }
+
 .actions{
     &.clearfix{
        margin: 45px 0 35px;
 
         ul{
             display: flex;
-            margin: 0 -10px;
+            margin: 0 -15px;
             justify-content: center; 
 
             li{
-                padding: 0 10px;
+                padding: 0 15px;
             }
         }
     }
@@ -60,3 +61,4 @@
         }
     }
 }
+
