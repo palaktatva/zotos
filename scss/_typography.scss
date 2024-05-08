@@ -9,4 +9,10 @@ h3{
     font-size: 39px;
     font-weight: 700;
     margin-bottom: 24px;
+    @include bp(lg-max){
+        font-size: 36px;
+    }
+    @include bp(sm-max){
+        font-size: 34px;
+    }
 }

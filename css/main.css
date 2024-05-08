@@ -6,6 +6,10 @@
   font-family: "summerloving-regular";
   src: url("../fonts/SummerLovingSolid-Regular.woff");
 }
+@font-face {
+  font-family: "helveticaneue-regular";
+  src: url("../fonts/HelveticaNeueLTStd-Roman.eot");
+}
 * {
   padding: 0;
   margin: 0;
@@ -50,6 +54,16 @@ h3 {
   font-weight: 700;
   margin-bottom: 24px;
 }
+@media (max-width: 1199px) {
+  h3 {
+    font-size: 36px;
+  }
+}
+@media (max-width: 767px) {
+  h3 {
+    font-size: 34px;
+  }
+}
 
 .btn {
   min-height: 60px;
@@ -59,6 +73,17 @@ h3 {
   justify-content: center;
   font-size: 22px;
   border: 2px solid #000000;
+}
+@media (max-width: 575px) {
+  .btn {
+    min-width: 170px;
+    min-height: 50px;
+  }
+}
+@media (max-width: 374px) {
+  .btn {
+    min-width: 130px;
+  }
 }
 
 .yellow-btn {
@@ -84,13 +109,22 @@ h3 {
 .actions.clearfix {
   margin: 45px 0 35px;
 }
+@media (max-width: 767px) {
+  .actions.clearfix {
+    margin: 30px 0;
+  }
+}
 .actions.clearfix ul {
   display: flex;
-  margin: 0 -15px;
   justify-content: center;
 }
 .actions.clearfix ul li {
   padding: 0 15px;
+}
+@media (max-width: 767px) {
+  .actions.clearfix ul li {
+    padding: 0 10px;
+  }
 }
 
 .tabcontrol ul {
@@ -113,6 +147,11 @@ h3 {
   padding: 0 50px;
   margin: 0 auto;
 }
+@media (max-width: 1199px) {
+  .container {
+    padding: 0 25px;
+  }
+}
 
 .quiz-section {
   padding: 80px 0;
@@ -124,9 +163,24 @@ h3 {
   word-spacing: 20px;
   font-weight: 400;
 }
+@media (max-width: 1199px) {
+  .quiz-section .heading-block span {
+    font-size: 60px;
+  }
+}
+@media (max-width: 767px) {
+  .quiz-section .heading-block span {
+    font-size: 50px;
+  }
+}
 .quiz-section .steps-content-block .step-inner-block {
   padding: 35px 0 45px;
   background-color: #ffeaf3;
+}
+@media (max-width: 767px) {
+  .quiz-section .steps-content-block .step-inner-block {
+    padding: 30px 0;
+  }
 }
 .quiz-section .steps-content-block .step-inner-block.step-7 .tooltip-block {
   max-width: 570px;
@@ -195,6 +249,11 @@ h3 {
   border-radius: 11px;
   position: relative;
 }
+@media (max-width: 479px) {
+  .quiz-section .steps-content-block .title-block .tooltip-block {
+    align-items: flex-start;
+  }
+}
 .quiz-section .steps-content-block .title-block .tooltip-block span {
   font-size: 78px;
   font-family: "summerloving-regular";
@@ -203,6 +262,7 @@ h3 {
 }
 .quiz-section .steps-content-block .title-block .tooltip-block p {
   line-height: 1.6;
+  font-family: "helveticaneue-regular";
 }
 .quiz-section .steps-content-block .title-block .tooltip-block p::before {
   content: "";
@@ -210,7 +270,7 @@ h3 {
   height: 25px;
   background: white;
   position: absolute;
-  top: -14px;
+  top: -13px;
   transform: rotate(45deg);
   left: 45px;
 }
@@ -223,10 +283,38 @@ h3 {
   flex-wrap: wrap;
   margin: 0 -10px -20px;
 }
+@media (max-width: 1199px) {
+  .quiz-section .radio-checkbox-listing-outer .radio-checkbox-listing {
+    margin: 0 -13px -25px;
+  }
+}
+@media (max-width: 374px) {
+  .quiz-section .radio-checkbox-listing-outer .radio-checkbox-listing {
+    margin: 0 0 -25px;
+  }
+}
 .quiz-section .radio-checkbox-listing-outer .radio-checkbox-listing .radio-checkbox-list {
   flex: 0 0 33.33%;
   max-width: 33.33%;
   padding: 0 10px 20px;
+}
+@media (max-width: 1199px) {
+  .quiz-section .radio-checkbox-listing-outer .radio-checkbox-listing .radio-checkbox-list {
+    padding: 0 13px 25px;
+  }
+}
+@media (max-width: 767px) {
+  .quiz-section .radio-checkbox-listing-outer .radio-checkbox-listing .radio-checkbox-list {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+@media (max-width: 374px) {
+  .quiz-section .radio-checkbox-listing-outer .radio-checkbox-listing .radio-checkbox-list {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 0 0 25px;
+  }
 }
 .quiz-section .radio-checkbox-listing-outer .radio-checkbox-listing .radio-checkbox-list .radio-checkbox-list-inner {
   display: flex;
@@ -282,20 +370,47 @@ h3 {
   display: inline-block;
   margin-bottom: 10px;
 }
-.quiz-section .radio-checkbox-listing-outer .radio-checkbox-listing.two-gride {
-  margin: 0 -18px -24px;
+.quiz-section .radio-checkbox-listing-outer .radio-checkbox-listing .radio-checkbox-list .radio-checkbox-list-inner .content-block p {
+  font-family: "helveticaneue-regular";
+}
+.quiz-section .radio-checkbox-listing-outer.two-gride {
   max-width: 440px;
   margin: 0 auto;
 }
-.quiz-section .radio-checkbox-listing-outer .radio-checkbox-listing.two-gride .radio-checkbox-list {
+.quiz-section .radio-checkbox-listing-outer.two-gride .radio-checkbox-listing {
+  margin: 0 -18px -24px;
+}
+@media (max-width: 1199px) {
+  .quiz-section .radio-checkbox-listing-outer.two-gride .radio-checkbox-listing {
+    margin: 0 -13px -25px;
+  }
+}
+@media (max-width: 575px) {
+  .quiz-section .radio-checkbox-listing-outer.two-gride .radio-checkbox-listing {
+    margin: 0 0 -25px;
+  }
+}
+.quiz-section .radio-checkbox-listing-outer.two-gride .radio-checkbox-listing .radio-checkbox-list {
   flex: 0 0 50%;
   max-width: 50%;
   padding: 0 18px 24px;
 }
-.quiz-section .radio-checkbox-listing-outer .radio-checkbox-listing.secondary-label input:checked ~ label {
+@media (max-width: 1199px) {
+  .quiz-section .radio-checkbox-listing-outer.two-gride .radio-checkbox-listing .radio-checkbox-list {
+    padding: 0 13px 25px;
+  }
+}
+@media (max-width: 575px) {
+  .quiz-section .radio-checkbox-listing-outer.two-gride .radio-checkbox-listing .radio-checkbox-list {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 0 0 25px;
+  }
+}
+.quiz-section .radio-checkbox-listing-outer.secondary-label input:checked ~ label {
   border: 3px solid #bb1b60;
 }
-.quiz-section .radio-checkbox-listing-outer .radio-checkbox-listing.secondary-label label {
+.quiz-section .radio-checkbox-listing-outer.secondary-label label {
   min-height: 60px;
   display: inline-flex;
   align-items: center;
@@ -304,10 +419,13 @@ h3 {
   background-color: #ffffff;
 }
 
-.progress-bar {
-  max-width: 560px;
+.progress-bar-outer-wrapper {
+  padding: 0 25px;
+}
+.progress-bar-outer-wrapper .progress-bar {
+  width: 560px;
   border-radius: 8px;
-  width: 100%;
+  max-width: 100%;
   overflow: hidden;
   height: 15px;
   border: 1px solid #000000;
@@ -315,16 +433,16 @@ h3 {
   position: relative;
   margin: 0 auto;
 }
-.progress-bar span {
+.progress-bar-outer-wrapper .progress-bar span {
   background: url(../images/progress-bar.png);
   background-repeat: no-repeat;
   position: absolute;
-  width: 10%;
+  width: 0%;
   left: 0;
   top: 0;
   height: 100%;
   background-size: cover;
-  max-width: 100%;
+  transition: width 0.5s linear;
 }
 
 .modal-open {

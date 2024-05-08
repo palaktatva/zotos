@@ -2,6 +2,13 @@
     max-width: 908px;
     padding: 0 50px;
     margin: 0 auto;
+
+    @include bp(lg-max){
+        padding: 0 25px;
+    }
+    // @include bp(sm-max){
+    //     padding: 0 15px;
+    // }
 }
 
 .quiz-section {
@@ -15,6 +22,13 @@
             display: block;
             word-spacing: 20px;
             font-weight: 400;
+
+            @include bp(lg-max){
+                font-size: 60px;
+            }
+            @include bp(sm-max){
+                font-size: 50px;
+            }
         }
     }
 
@@ -24,7 +38,9 @@
         .step-inner-block {
             padding: 35px 0 45px;
             background-color: $light-pink;
-
+            @include bp(sm-max){
+                padding: 30px 0;
+            }
             &.step-7{
                 .tooltip-block{
                     max-width: 570px;
@@ -125,7 +141,9 @@
                 align-items: flex-end;
                 border-radius: 11px;
                 position: relative;
-
+                @include bp(xxs-max){
+                    align-items: flex-start;
+                }
                 span {
                     font-size: 78px;
                     font-family: 'summerloving-regular';
@@ -136,13 +154,14 @@
 
                 p {
                     line-height: 1.6;
+                    font-family: 'helveticaneue-regular';
                     &::before {
                         content: "";
                         width: 25px;
                         height: 25px;
                         background: white;
                         position: absolute;
-                        top: -14px;
+                        top: -13px;
                         transform: rotate(45deg);
                         left: 45px;
                     }
@@ -158,11 +177,29 @@
         display: flex;
         flex-wrap: wrap;
         margin: 0 -10px -20px;
+        @include bp(lg-max){
+            margin: 0 -13px -25px;
+        }
+        @include bp(xxxs-max){
+            margin: 0 0 -25px;
+           }
 
         .radio-checkbox-list {
             flex: 0 0 33.33%;
             max-width: 33.33%;
             padding: 0 10px 20px;
+            @include bp(lg-max){
+                padding: 0 13px 25px;
+            }
+           @include bp(sm-max){
+            flex: 0 0 50%;
+            max-width: 50%;
+           }
+           @include bp(xxxs-max){
+            flex: 0 0 100%;
+            max-width: 100%;
+            padding: 0 0 25px;
+           }
 
             .radio-checkbox-list-inner {
                 display: flex;
@@ -226,39 +263,64 @@
                         display: inline-block;
                         margin-bottom: 10px;
                     }
+                     p{
+                        font-family: 'helveticaneue-regular';;
+                    }
                 }
 
             }
         }
 
-        &.two-gride {
-            margin: 0 -18px -24px;
-            max-width: 440px;
-            margin: 0 auto;
+       
+    }
 
+    &.two-gride {
+        max-width: 440px;
+        margin: 0 auto;
+
+        .radio-checkbox-listing{
+           margin: 0 -18px -24px;
+            @include bp(lg-max){
+             margin: 0 -13px -25px;
+            }
+            @include bp(xs-max){
+                margin: 0 0 -25px;
+               }
             .radio-checkbox-list {
                 flex: 0 0 50%;
                 max-width: 50%;
                 padding: 0 18px 24px;
-            }
-        }
-
-        &.secondary-label {
-            input {
-                &:checked~label {
-                    border: 3px solid $dark-pink;
+                
+                @include bp(lg-max){
+                padding: 0 13px 25px;
+                }
+                @include bp(xs-max){
+                    flex: 0 0 100%;
+                    max-width: 100%;
+                    padding: 0 0 25px;
                 }
             }
+        }
 
-            label {
-                min-height: 60px;
-                display: inline-flex;
-                align-items: center;
-                justify-content: center;
-                border: 1px solid $border-color;
-                background-color: $white;
+        
+    }
+
+    &.secondary-label {
+        input {
+            &:checked~label {
+                border: 3px solid $dark-pink;
             }
         }
+
+        label {
+            min-height: 60px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid $border-color;
+            background-color: $white;
+        }
+       
     }
 }
    
@@ -266,30 +328,33 @@
 }
 
 
-
-.progress-bar {
-    max-width: 560px;
-    border-radius: 8px;
-    width: 100%;
-    overflow: hidden;
-    height: 15px;
-    border: 1px solid $black;
-    background-color: $white;
-    position: relative;
-    margin: 0 auto;
-
-    span {
-        background: url(../images/progress-bar.png);
-        background-repeat: no-repeat;
-        position: absolute;
-        width: 10%;
-        left: 0;
-        top: 0;
-        height: 100%;
-        background-size: cover;
+.progress-bar-outer-wrapper{
+    padding: 0 25px     ;
+    .progress-bar {
+        width: 560px;
+        border-radius: 8px;
         max-width: 100%;
+        overflow: hidden;
+        height: 15px;
+        border: 1px solid $black;
+        background-color: $white;
+        position: relative;
+        margin: 0 auto;
+    
+        span {
+            background: url(../images/progress-bar.png);
+            background-repeat: no-repeat;
+            position: absolute;
+            width: 0%;
+            left: 0;
+            top: 0;
+            height: 100%;
+            background-size: cover;
+            transition: width 0.5s linear;
+        }
     }
 }
+
 
 .modal-open{
     overflow: hidden;
