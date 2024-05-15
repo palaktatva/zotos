@@ -1,13 +1,38 @@
 @font-face {
     font-family: 'helveticaneue-bold';
-    src: url('../fonts/HelveticaNeueLTStd-BdCn.woff');
+    src: url('../fonts/HelveticaNeueLTStd-BdCn.eot');
+    src: url('../fonts/HelveticaNeueLTStd-BdCn.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/HelveticaNeueLTStd-BdCn.woff2') format('woff2'),
+        url('../fonts/HelveticaNeueLTStd-BdCn.woff') format('woff'),
+        url('../fonts/HelveticaNeueLTStd-BdCn.ttf') format('truetype'),
+        url('../fonts/HelveticaNeueLTStd-BdCn.svg#HelveticaNeueLTStd-BdCn') format('svg');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'summerloving-regular';
-    src: url('../fonts/SummerLovingSolid-Regular.woff');
+    src: url('../fonts/SummerLovingSolid-Regular.eot');
+    src: url('../fonts/SummerLovingSolid-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/SummerLovingSolid-Regular.woff2') format('woff2'),
+        url('../fonts/SummerLovingSolid-Regular.woff') format('woff'),
+        url('../fonts/SummerLovingSolid-Regular.ttf') format('truetype'),
+        url('../fonts/SummerLovingSolid-Regular.svg#SummerLovingSolid-Regular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
 }
+
 @font-face {
     font-family: 'helveticaneue-regular';
     src: url('../fonts/HelveticaNeueLTStd-Roman.eot');
+    src: url('../fonts/HelveticaNeueLTStd-Roman.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/HelveticaNeueLTStd-Roman.woff2') format('woff2'),
+        url('../fonts/HelveticaNeueLTStd-Roman.woff') format('woff'),
+        url('../fonts/HelveticaNeueLTStd-Roman.ttf') format('truetype'),
+        url('../fonts/HelveticaNeueLTStd-Roman.svg#HelveticaNeueLTStd-Roman') format('svg');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
 }

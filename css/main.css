@@ -1,14 +1,26 @@
 @font-face {
   font-family: "helveticaneue-bold";
-  src: url("../fonts/HelveticaNeueLTStd-BdCn.woff");
+  src: url("../fonts/HelveticaNeueLTStd-BdCn.eot");
+  src: url("../fonts/HelveticaNeueLTStd-BdCn.eot?#iefix") format("embedded-opentype"), url("../fonts/HelveticaNeueLTStd-BdCn.woff2") format("woff2"), url("../fonts/HelveticaNeueLTStd-BdCn.woff") format("woff"), url("../fonts/HelveticaNeueLTStd-BdCn.ttf") format("truetype"), url("../fonts/HelveticaNeueLTStd-BdCn.svg#HelveticaNeueLTStd-BdCn") format("svg");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: "summerloving-regular";
-  src: url("../fonts/SummerLovingSolid-Regular.woff");
+  src: url("../fonts/SummerLovingSolid-Regular.eot");
+  src: url("../fonts/SummerLovingSolid-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/SummerLovingSolid-Regular.woff2") format("woff2"), url("../fonts/SummerLovingSolid-Regular.woff") format("woff"), url("../fonts/SummerLovingSolid-Regular.ttf") format("truetype"), url("../fonts/SummerLovingSolid-Regular.svg#SummerLovingSolid-Regular") format("svg");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: "helveticaneue-regular";
   src: url("../fonts/HelveticaNeueLTStd-Roman.eot");
+  src: url("../fonts/HelveticaNeueLTStd-Roman.eot?#iefix") format("embedded-opentype"), url("../fonts/HelveticaNeueLTStd-Roman.woff2") format("woff2"), url("../fonts/HelveticaNeueLTStd-Roman.woff") format("woff"), url("../fonts/HelveticaNeueLTStd-Roman.ttf") format("truetype"), url("../fonts/HelveticaNeueLTStd-Roman.svg#HelveticaNeueLTStd-Roman") format("svg");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
 * {
   padding: 0;
@@ -156,6 +168,11 @@ h3 {
 .quiz-section {
   padding: 80px 0;
 }
+@media (max-width: 767px) {
+  .quiz-section {
+    padding: 40px 0;
+  }
+}
 .quiz-section .heading-block span {
   font-size: 70px;
   font-family: "summerloving-regular";
@@ -196,7 +213,8 @@ h3 {
 .quiz-section .steps-content-block .step-inner-block.bg-blue input:checked ~ label {
   color: #1d6153 !important;
 }
-.quiz-section .steps-content-block .step-inner-block.bg-blue input:checked ~ .image-block, .quiz-section .steps-content-block .step-inner-block.bg-blue input .content-block {
+.quiz-section .steps-content-block .step-inner-block.bg-blue input:checked ~ .image-block::after,
+.quiz-section .steps-content-block .step-inner-block.bg-blue input .content-block::after {
   border: 3px solid #1d6153 !important;
 }
 .quiz-section .steps-content-block .step-inner-block.bg-green {
@@ -205,16 +223,16 @@ h3 {
 .quiz-section .steps-content-block .step-inner-block.bg-green input:checked ~ label {
   color: #4d8b07 !important;
 }
-.quiz-section .steps-content-block .step-inner-block.bg-green input:checked ~ .image-block {
+.quiz-section .steps-content-block .step-inner-block.bg-green input:checked ~ .image-block::after {
   border: 3px solid #4d8b07 !important;
 }
-.quiz-section .steps-content-block .step-inner-block.bg-green input:checked ~ .content-block {
+.quiz-section .steps-content-block .step-inner-block.bg-green input:checked ~ .content-block::after {
   border: 3px solid #4d8b07 !important;
 }
-.quiz-section .steps-content-block .step-inner-block.bg-green input:checked ~ .content-block label {
+.quiz-section .steps-content-block .step-inner-block.bg-green input:checked ~ .content-block::after label {
   color: #4d8b07 !important;
 }
-.quiz-section .steps-content-block .step-inner-block.bg-green input:checked ~ .content-block p {
+.quiz-section .steps-content-block .step-inner-block.bg-green input:checked ~ .content-block::after p {
   color: #4d8b07 !important;
 }
 .quiz-section .steps-content-block .step-inner-block.bg-light-blue {
@@ -226,7 +244,7 @@ h3 {
 .quiz-section .steps-content-block .step-inner-block.bg-light-blue input:checked ~ label {
   color: #1d6153 !important;
 }
-.quiz-section .steps-content-block .step-inner-block.bg-light-blue input:checked ~ .image-block {
+.quiz-section .steps-content-block .step-inner-block.bg-light-blue input:checked ~ .image-block::after {
   border: 3px solid #1d6153 !important;
 }
 .quiz-section .steps-content-block .step-inner-block .container {
@@ -333,16 +351,16 @@ h3 {
 .quiz-section .radio-checkbox-listing-outer .radio-checkbox-listing .radio-checkbox-list .radio-checkbox-list-inner input:checked ~ label {
   color: #bb1b60;
 }
-.quiz-section .radio-checkbox-listing-outer .radio-checkbox-listing .radio-checkbox-list .radio-checkbox-list-inner input:checked ~ .image-block {
+.quiz-section .radio-checkbox-listing-outer .radio-checkbox-listing .radio-checkbox-list .radio-checkbox-list-inner input:checked ~ .image-block::after {
   border: 3px solid #bb1b60;
 }
-.quiz-section .radio-checkbox-listing-outer .radio-checkbox-listing .radio-checkbox-list .radio-checkbox-list-inner input:checked ~ .content-block {
+.quiz-section .radio-checkbox-listing-outer .radio-checkbox-listing .radio-checkbox-list .radio-checkbox-list-inner input:checked ~ .content-block::after {
   border: 3px solid #bb1b60;
 }
-.quiz-section .radio-checkbox-listing-outer .radio-checkbox-listing .radio-checkbox-list .radio-checkbox-list-inner input:checked ~ .content-block label {
+.quiz-section .radio-checkbox-listing-outer .radio-checkbox-listing .radio-checkbox-list .radio-checkbox-list-inner input:checked ~ .content-block::after label {
   color: #bb1b60;
 }
-.quiz-section .radio-checkbox-listing-outer .radio-checkbox-listing .radio-checkbox-list .radio-checkbox-list-inner input:checked ~ .content-block p {
+.quiz-section .radio-checkbox-listing-outer .radio-checkbox-listing .radio-checkbox-list .radio-checkbox-list-inner input:checked ~ .content-block::after p {
   color: #bb1b60;
 }
 .quiz-section .radio-checkbox-listing-outer .radio-checkbox-listing .radio-checkbox-list .radio-checkbox-list-inner label {
@@ -352,6 +370,15 @@ h3 {
 }
 .quiz-section .radio-checkbox-listing-outer .radio-checkbox-listing .radio-checkbox-list .radio-checkbox-list-inner .image-block {
   margin-bottom: 10px;
+  position: relative;
+}
+.quiz-section .radio-checkbox-listing-outer .radio-checkbox-listing .radio-checkbox-list .radio-checkbox-list-inner .image-block::after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   border: 1px solid #363636;
 }
 .quiz-section .radio-checkbox-listing-outer .radio-checkbox-listing .radio-checkbox-list .radio-checkbox-list-inner .image-block img {
@@ -363,8 +390,17 @@ h3 {
   background-color: #ffffff;
   padding: 25px;
   text-align: center;
-  border: 1px solid #363636;
   height: 100%;
+  position: relative;
+}
+.quiz-section .radio-checkbox-listing-outer .radio-checkbox-listing .radio-checkbox-list .radio-checkbox-list-inner .content-block::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  border: 1px solid #363636;
 }
 .quiz-section .radio-checkbox-listing-outer .radio-checkbox-listing .radio-checkbox-list .radio-checkbox-list-inner .content-block label {
   display: inline-block;

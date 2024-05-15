@@ -5,7 +5,6 @@ function get_height() {
   });
   }
 
-
 jQuery(document).ready(function(){
 
   jQuery(".step-content-wrapper").steps({
@@ -18,19 +17,11 @@ jQuery(document).ready(function(){
       previous: "Back"
     },
   
-    onInit: function (currentIndex, event,  priorIndex) {
+    onInit: function (currentIndex) {
            
       get_height();
-      var currentIndex = jQuery(".step-content-wrapper .steps .current").index();
-       console.log("current index " +currentIndex);
-       var totalsteps = jQuery(this).find(".steps-content-block").length;
-       console.log(totalsteps);
-       var progress = ((currentIndex + 1) * 100) / totalsteps;   
-               
-       jQuery(".progress-bar").find("span").css("width", progress + "%");
-
-     // jQuery for add class
-  
+      jQuery(".actions a[href='#previous']").hide();
+      // jQuery for add class  
       jQuery(".actions.clearfix ul li a ").addClass("btn")
       jQuery(".actions a[href='#next'], .actions a[href='#finish']").addClass("yellow-btn");
       jQuery(".actions a[href='#next'], .actions a[href='#finish']").addClass("disable");
@@ -41,31 +32,34 @@ jQuery(document).ready(function(){
             jQuery(".actions a[href='#next'], .actions a[href='#finish']").removeClass("disable");
           })       
         });
-      //  jQuery(".progress-bar").find("span").css("width", "10%");
        },
   
-      onStepChanged: function (currentIndex, priorIndex, event) {  
-        get_height();  
+      onStepChanged: function (currentIndex, priorIndex, event) {
+        
+        get_height(); 
+
+        // animate progress bar jquery
+        var currentIndex = jQuery(".step-content-wrapper .steps .current").index();
+        var totalsteps = jQuery(this).find(".steps-content-block").length - 1;
+        var progress = ((currentIndex) * 100) / totalsteps;                  
+        jQuery(".progress-bar").find("span").css("width", progress + "%");
+
+        jQuery(".actions a[href='#previous']").show(500); 
+        if(currentIndex == totalsteps || currentIndex == 0){
+          jQuery(".actions a[href='#previous']").hide(125);
+        }
+        
         jQuery("html, body").animate({
           scrollTop: 0
-        });   
-
-       var currentIndex = jQuery(".step-content-wrapper .steps .current").index();
-       console.log("current index " +currentIndex);
-       var totalsteps = jQuery(this).find(".steps-content-block").length;
-       console.log(totalsteps);
-       var progress = ((currentIndex + 1) * 100) / totalsteps;   
-               
-       jQuery(".progress-bar").find("span").css("width", progress + "%");
-
-        // console.log(progress);
+        }, 500);   
         
+        // jQuery for next and previous button
        if(event > priorIndex){
             jQuery(".actions a[href='#next'], .actions a[href='#finish']").removeClass("disable");                
           }
   
        else{
-      jQuery(".steps-content-block.current").find(".radio-checkbox-listing").each(function(){
+       jQuery(".steps-content-block.current").find(".radio-checkbox-listing").each(function(){
        var result = jQuery(this).find("input[type='radio']:checked , input[type='checkbox']:checked")
        if(result.length == 0){
         jQuery(".actions a[href='#next'], .actions a[href='#finish']").addClass("disable");
@@ -76,7 +70,6 @@ jQuery(document).ready(function(){
        jQuery(this).find("input").change(function(){
         jQuery(".actions a[href='#next'], .actions a[href='#finish']").removeClass("disable");
       })
-
             
       });
     
@@ -111,30 +104,10 @@ jQuery(document).ready(function(){
     
   });
   
-//last step of progress bar  
-// var progress = "100%"
-// var reverseprogress = "10%"
-//   jQuery(".steps-content-block").last().find("input").click(function () {  
-//     jQuery(".progress-bar").find("span").css("width", progress);
-//   });
 
-  // jQuery(".actions a[href='#previous']").click(function(){
-  //   jQuery(".progress-bar").find("span").css("width", "90%");
-
-  // });
-})
+})   
 
 
-
-
-    
-
-
-$(document).resize(function(){
-  onInit();
-  onStepChanged();
-});
-$(document).load(function(){
-  onInit();
-    onStepChanged();
+$(window).resize(function(){
+  get_height();
 });
